@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from wordcloud import WordCloud,ImageColorGenerator
 
-# 打开文本，这里可以自定义文本数据
 def getPath(name):
   return os.path.join(os.path.dirname(__file__),name)
 
@@ -17,6 +16,7 @@ def random_color(word, font_size, position, orientation, font_path, random_state
 	print(s)
 	return s
 
+# 打开文本，这里可以自定义文本数据
 text = open(getPath('./asset/Chinese.txt')).read()
 
 # 中文分词，如果上面加载的是英文词库，则不需要分词
